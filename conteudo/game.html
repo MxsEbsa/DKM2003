@@ -1,0 +1,1204 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<meta http-equiv="cache-control" content="max-age=0" />
+	<meta http-equiv="expires" content="0" />
+	<meta name="author" content="Editora do Brasil" />
+	<meta name="copyright" content="© 2014 Editoradobrasil.com.br" />
+	<meta name="apple-mobile-web-app-capable" content="yes"> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-title" content="Editora do Brasil">
+	
+	<link rel="stylesheet" href="css/normalize.css" type="text/css">
+	<link rel="stylesheet" href="css/animate.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	
+		<script>
+function iniciar_oed_frame(){
+	//alert("iniciar_oed_frame");
+	iniciar_com_tap();
+}	
+	</script>
+	
+	
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.touch-punch.js"></script>
+	<script type="text/javascript" src="js/PxLoader.js"></script>
+	<script type="text/javascript" src="js/PxLoaderImage.js"></script>
+	<script type="text/javascript" src="js/jquery.spritely.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/howler.min.js"></script>
+	<script type="text/javascript" src="js/jquery-css-transform.js"></script>
+	<script type="text/javascript" src="js/jquery-animate-css-rotate-scale.js"></script>
+	<script type="text/javascript" src="js/funcoes.js"></script>
+	<title></title>
+</head>
+
+<body>
+<!-- Teste para carregar sons -->
+<span style="display:none">
+	<audio><source src="./media/acerto.mp3" type="audio/mpeg"></audio>
+	<audio><source src="./media/ambiente.mp3" type="audio/mpeg"></audio>
+	<audio><source src="./media/DMT2_03_Menina.mp3" type="audio/mpeg"></audio>
+	<audio><source src="./media/DMT2_03_Menina_25_27.mp3" type="audio/mpeg"></audio>
+	<audio><source src="./media/DMT2_03_Menino.mp3" type="audio/mpeg"></audio>
+	<audio><source src="./media/DMT2_03_Menino_25_27.mp3" type="audio/mpeg"></audio>
+	<audio><source src="./media/DMT2_03_Narrador.mp3" type="audio/mpeg"></audio>
+	<audio><source src="./media/DMT2_03_Narrador_20_24.mp3" type="audio/mpeg"></audio>
+	<audio><source src="./media/musica.mp3" type="audio/mpeg"></audio>
+	<audio><source src="./media/texto1.mp3" type="audio/mpeg"></audio>
+	<audio><source src="./media/texto2.mp3" type="audio/mpeg"></audio>
+	<audio><source src="./media/texto3.mp3" type="audio/mpeg"></audio>
+</span>
+<!-- Teste para carregar sons -->
+<div id="cobertura_oed_inicio"></div>
+<div id="loading"><img src="img/loader.gif" alt="Carregando">Carregando</div>
+<div id="init" class="container" data-fullscreen="true">
+	<div id="capa">
+		<div class="header">
+			<h1></h1>
+		</div>
+		<div class="subheader">
+			<span style="position: absolute; color: #fff; top: 15px; left: 258px; font-size: 33px; color: #FFFFFF; font-family: 'MyriadProRegular';">-</span>	
+			<p></p>
+		</div>
+		<div class="acoes">
+			<div>Iniciar</div>
+			<div>créditos</div>
+		</div>
+		<div id="creditos">
+			<div class="barraLogo">
+				<img src="img/logo.png">
+			</div>
+			<h2>Projeto Jimboê</h2>
+			<div class="boxTextMask"></div>
+			<div class="boxText">
+				<div class="text-creditos">
+					<strong>Supervisão de arte, editoração e produção digital:</strong> Adelaide Carolina Cerutti<br>
+					<strong>Coordenação de produção digital:</strong> Daniel Cilli<br><br>
+
+					<strong>Design instrucional:</strong> Mateus Carneiro Ribeiro Alves<br>
+					<strong>Web design:</strong> Thiago Hille e Tiago Lima<br>
+					<strong>Assistência de design digital:</strong> Emília Akemi<br>
+					<strong>Assistência de arte:</strong> Livia Danielli <br>
+					<strong>Revisão:</strong> Equipe Revisão <br>
+					<strong>Pesquisa iconográfica:</strong> Mariane Mota <br>
+					<strong>Imagens/Ilustrações:</strong> Shutterstock<br>
+					<strong>Áudio:</strong> Stereobot e Soundsnap<br>
+					<strong>Narração:</strong> Flávio Kranic e Mariana Zink<br>
+					<strong>Controle de processos editoriais:</strong> Equipe CPE<br>
+				</div>
+			</div>
+			<div class="btnFechaCreditos">Fechar</div>
+		</div>
+	</div>
+<!-- Start code -->
+	<div id="content">
+
+
+		<!-- tela preta -->	
+		<div class="telaPreta">
+		</div>
+		<!-- tela preta -->
+
+		<!-- POPUP -->
+		<div class="popup">
+			<div class="text">
+				<p>Oba! Vamos viajar para a praia! Chegou a hora de preparar as malas e fazer as compras. Antes de começar a fazer isso, selecione um dos personagens para ajudá-lo.</p>
+			</div>
+			<div class="gameMenina">
+				<img src="img/gameMenina.png" alt="Game Menina">
+			</div>
+			<div class="gameMenino">
+				<img src="img/gameMenino.png" alt="Game Menina">
+			</div>
+		</div>
+		<!-- POPUP -->
+			
+
+		<!-- GAME 1 MASCULINO -->
+		<div class="game1">
+
+			<div class="superMercadoNoClick"></div>
+			<div class="suaCasaNoClick"></div>
+			<div class="lojaDeMalasNoClick"></div>
+			<div class="casaDosAvosNoClick"></div>
+			<div class="padariaNoClick"></div>
+			<div class="postoDeGasolinaNoClick"></div>
+			<div class="oficinaMecanicaNoClick"></div>
+			<div class="lojaDeAnimaisNoClick"></div>
+			
+			
+			<!-- POPUP INICIAL -->
+			<div class="popupBG">
+				<div class="close">
+					<h1>Fechar</h1>
+				</div>
+				<p>O Sol está de rachar. Se nossa pele não queremos queimar, um guarda-sol e um protetor teremos de comprar.
+				Olhe o mapa e descubra onde esses itens encontrar.</p>
+			</div>
+			<!-- END POPUP INICIAL -->
+
+			<!-- POPUP INICIAL -->
+			<div class="popupSuperMercadoAvance">
+				<div class="close">
+					<h1>Fechar</h1>
+				</div>
+				<p>Como a viagem é longa, pãozinho nós vamos levar. Não podemos nos esquecer de uma garrafa de água também comprar. Descubra onde esses itens encontrar.</p>
+			</div>
+			<!-- END POPUP INICIAL -->
+
+			<!-- POPUP INICIAL -->
+			<div class="popupPadariaAvance">
+				<div class="close">
+					<h1>Fechar</h1>
+				</div>
+				<p>Muitas coisas vocês já puderam comprar, mas agora do carro têm de cuidar.</p>
+			</div>
+			<!-- END POPUP INICIAL -->
+
+			<!-- POPUP INICIAL -->
+			<div class="popupOficinaMecanicaAvance">
+				<div class="close">
+					<h1>Fechar</h1>
+				</div>
+				<p>Agora o carro está em ordem e vocês já podem viajar, mas falta um detalhe para o carro andar.</p>
+			</div>
+			<!-- END POPUP INICIAL -->
+
+			<!-- POPUP INICIAL -->
+			<div class="popupPostoDeGasolinaAvance">
+				<div class="close">
+					<h1>Fechar</h1>
+				</div>
+				<p>O carro está pronto para viajar, mas vocês não têm a mala para arrumar.</p>
+			</div>
+			<!-- END POPUP INICIAL -->
+
+			<!-- POPUP INICIAL -->
+			<div class="popupLojaDeMalasAvance">
+				<div class="close">
+					<h1>Fechar</h1>
+				</div>
+				<p>As malas vocês já têm para viajar, agora vão para casa a fim de as malas arrumar. Mas, antes, comida e acessórios para o Rex têm de comprar.</p>
+			</div>
+			<!-- END POPUP INICIAL -->
+
+			<!-- POPUP INICIAL -->
+			<div class="popupLojaDeAnimaisAvance">
+				<div class="close">
+					<h1>Fechar</h1>
+				</div>
+				<p>A viagem está quase pronta, mas vocês precisam abrir o cofrinho para um sorvete tomar.</p>
+			</div>
+			<!-- END POPUP INICIAL -->
+
+			<!-- POPUP INICIAL -->
+			<div class="popupSuaCasaAvance">
+				<div class="close">
+					<h1>Fechar</h1>
+				</div>
+				<p>Chegou a hora de viajar e nossos queridos avós chamar.</p>
+			</div>
+			<!-- END POPUP INICIAL -->
+
+			<div class="placas SuperMercadoPai">
+				<div class="cordenadas supermercado"></div>
+				<div class="placa eventsupermercado"><img src="img/pl-supermercado.png" alt=""></div>
+				<!-- CONTEUDO -->
+				<div class="pergunta">
+					<div class="conteudo">
+						<!-- POPUP -->
+						<div class="popupAcerto" id="dsdhsjdhj">
+							<div class="texto">
+								<p>Muito bem! Vamos continuar a fazer os preparativos para a viagem!</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninaPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupErro">
+							<div class="texto">
+								<p>Este não foi o valor que vocês gastaram. Tente outra vez.</p>
+							</div>
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupTerceiroErro">
+							<div class="texto">
+								<p>Adorei sua companhia, mas não conseguimos terminar de fazer os preparativos para a viagem. Vamos jogar novamente?</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninaPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+
+						<p>O guarda-sol custa 12 reais, e o protetor solar 7 reais. Quantos reais vocês gastaram para comprar os dois itens?</p>
+						<img class="imgPrincipal" src="img/imagem1.png">
+						<div class="acertos">
+							<ul class="cabecas">
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+							</ul>
+						</div>
+						<ul class="respostas">
+							<li id="respostasSupermercado"><span>10 REAIS</span></li>
+							<li id="respostasSupermercado"><span>15 REAIS</span></li>
+							<li id="respostasSupermercado"><span>20 REAIS</span></li>
+							<li class="certo" id="respostasSupermercado"><span>19 REAIS</span></li>
+							<li id="respostasSupermercado"><span>17 REAIS</span></li>
+						</ul>
+					</div>
+				</div>
+				<!-- END CONTEUDO -->
+			</div>
+
+			<div class="placas SuaCasaPai">
+				<div class="cordenadas suaCasa"></div>
+				<div class="placa eventSuaCasa"><img src="img/pl-suaCasa.png" alt=""></div>
+				<!-- CONTEUDO -->
+				<div class="pergunta">
+					<div class="conteudo">
+						<!-- POPUP -->
+						<div class="popupAcerto">
+							<div class="texto">
+								<p>Muito bem! Vamos continuar a fazer os preparativos para a viagem!</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninaPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupErro">
+							<div class="texto">
+								<p>Seria possível obter esse valor. Tente outra vez.</p>
+							</div>
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupTerceiroErro">
+							<div class="texto">
+								<p>Adorei sua companhia, mas não conseguimos terminar de fazer os preparativos para a viagem. Vamos jogar novamente?</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninaPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+						<p>Antes da viagem, abram seu cofrinho. Nele encontrarão cédulas de 10 reais e de 5 reais. Qual destes valores vocês não conseguiriam obter, mesmo juntando todas as cédulas?</p>
+						<img class="imgPrincipal" src="img/imagem7.png">
+						<div class="acertos">
+							<ul class="cabecas">
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+							</ul>
+						</div>
+						<ul class="respostas">
+							<li id="respostasSuaCasa"><span>75 REAIS</span></li>
+							<li class="certo" id="respostasSuaCasa"><span>87 REAIS</span></li>
+							<li id="respostasSuaCasa"><span>65 REAIS</span></li>
+							<li id="respostasSuaCasa"><span>50 REAIS</span></li>
+							<li id="respostasSuaCasa"><span>15 REAIS</span></li>
+						</ul>
+					</div>
+				</div>
+				<!-- END CONTEUDO -->
+			</div>
+
+			<div class="placas LojaDeMalasPai">
+				<div class="cordenadas lojaDeMalas"></div>
+				<div class="placa eventLojaDeMalas"><img src="img/pl-lojaDeMalas.png" alt=""></div>
+				<!-- CONTEUDO -->
+				<div class="pergunta perguntaLojaDeMalas">
+					<div class="conteudo">
+						<!-- POPUP -->
+						<div class="popupAcerto acertoLojaDeMalas">
+							<div class="texto">
+								<p>Muito bem! Vamos continuar a fazer os preparativos para a viagem!</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninaPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupErro erroLojaDeMalas">
+							<div class="texto">
+								<p>Não foram estas as malas que vocês compraram. Tente outra vez.</p>
+							</div>
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupTerceiroErro terceiroErroLojaDeMalas">
+							<div class="texto">
+								<p>Adorei sua companhia, mas não conseguimos terminar de fazer os preparativos para a viagem. Vamos jogar novamente?</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninaPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+						<p>Vocês compraram 2 malas e gastaram 68 reais. Que malas compraram?</p>
+						<img class="imgPrincipal" src="img/imagem5.png">
+						<div class="acertos">
+							<ul class="cabecas">
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+							</ul>
+						</div>
+						<ul class="respostas">
+							<li id="respostasMalas"><span>MALA 2</span></li>
+							<li id="respostasMalas"><span>MALAS 1 E 2</span></li>
+							<li class="certo" id="respostasMalas"><span>MALAS 1 E 3</span></li>
+							<li id="respostasMalas"><span>MALAS 1 E 4</span></li>
+							<li id="respostasMalas"><span>MALAS 3 E 4</span></li>
+						</ul>
+					</div>
+				</div>
+				<!-- END CONTEUDO -->
+			</div>
+
+			<div class="placas CasaDosAvosPai">
+				<div class="cordenadas casaDosAvos"></div>
+				<div class="placa eventCasaDosAvos"><img src="img/pl-casaDosAvos.png" alt=""></div>
+				<!-- CONTEUDO -->
+				<div class="pergunta">
+					<div class="conteudo">
+						<!-- POPUP -->
+						<div class="popupAcerto acertoCasaDaVo">
+							<div class="texto">
+								<p>Muito obrigada pela ajuda! Praia, aí vamos nós!</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninaPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupErro erroCasaDaVo">
+							<div class="texto">
+								<p>Não é essa quantia que temos. Tente outra vez.</p>
+							</div>
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupTerceiroErro terceiroErroCasaDaVo">
+							<div class="texto">
+								<p>Adorei sua companhia, mas não conseguimos terminar de fazer os preparativos para a viagem. Vamos jogar novamente?</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninaPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+						<p>Quando chegamos à casa de nossos avós, ganhamos 14 reais da vovó e 15 reais do vovô. Nós já tínhamos 50 reais, que retiramos do cofrinho. Quanto temos agora para levar na viagem?</p>
+						<img class="imgPrincipal" src="img/imagem8.png">
+						<div class="acertos">
+							<ul class="cabecas">
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+							</ul>
+						</div>
+						<ul class="respostas">
+							<li id="respostasAvos"><span>14 REAIS</span></li>
+							<li id="respostasAvos"><span>15 REAIS</span></li>
+							<li id="respostasAvos"><span>29 REAIS</span></li>
+							<li class="certo" id="respostasAvos"><span>79 REAIS</span></li>
+							<li id="respostasAvos"><span>50 REAIS</span></li>
+						</ul>
+					</div>
+				</div>
+				<!-- END CONTEUDO -->
+			</div>
+
+			<div class="placas PadariaPai">
+				<div class="cordenadas padaria"></div>
+				<div class="placa eventPadaria"><img src="img/pl-padaria.png" alt=""></div>
+				<!-- CONTEUDO -->
+				<div class="pergunta perguntaPadaria">
+					<div class="conteudo">
+						<!-- POPUP -->
+						<div class="popupAcerto acertoPadaria">
+							<div class="texto">
+								<p>Muito bem! Vamos continuar a fazer os preparativos para a viagem!</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninaPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupErro erroPadaria">
+							<div class="texto">
+								<p>Este não foi o valor que vocês gastaram. Tente outra vez.</p>
+							</div>
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupTerceiroErro terceiroErroPadaria">
+							<div class="texto">
+								<p>Adorei sua companhia, mas não conseguimos terminar de fazer os preparativos para a viagem. Vamos jogar novamente?</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninaPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+						<p>O pão custou 4 reais, e a garrafa de água 3 reais. Quanto vocês gastaram nessa compra?</p>
+						<img class="imgPrincipal" src="img/imagem2.png">
+						<div class="acertos">
+							<ul class="cabecas">
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+							</ul>
+						</div>
+						<ul class="respostas">
+							<li id="respostasPadaria"><span>10 REAIS</span></li>
+							<li id="respostasPadaria"><span>5 REAIS</span></li>
+							<li class="certo" id="respostasPadaria"><span>7 REAIS</span></li>
+							<li id="respostasPadaria"><span>4 REAIS</span></li>
+							<li id="respostasPadaria"><span>12 REAIS</span></li>
+						</ul>
+					</div>
+				</div>
+				<!-- END CONTEUDO -->
+			</div>
+
+			<div class="placas PostoDeGasolinaPai">
+				<div class="cordenadas postoDeGasolina"></div>
+				<div class="placa eventPostoDeGasolina"><img src="img/pl-postoDeGasolina.png" alt=""></div>
+				<!-- CONTEUDO -->
+				<div class="pergunta">
+					<div class="conteudo">
+						<!-- POPUP -->
+						<div class="popupAcerto">
+							<div class="texto">
+								<p>Muito bem! Vamos continuar a fazer os preparativos para a viagem!</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninaPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupErro">
+							<div class="texto">
+								<p>Esse não foi o valor que vocês receberam de troco. Tente outra vez.</p>
+							</div>
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupTerceiroErro">
+							<div class="texto">
+								<p>Adorei sua companhia, mas não conseguimos terminar de fazer os preparativos para a viagem. Vamos jogar novamente?</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninaPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+						<p>Vocês gastaram 20 reais para colocar gasolina e pagaram com uma nota de 50 reais. Quanto devem receber de troco?</p>
+						<img class="imgPrincipal" src="img/imagem4.png">
+						<div class="acertos">
+							<ul class="cabecas">
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+							</ul>
+						</div>
+						<ul class="respostas">
+							<li id="respostasPostodeGasolina"><span>20 REAIS</span></li>
+							<li id="respostasPostodeGasolina"><span>10 REAIS</span></li>
+							<li id="respostasPostodeGasolina"><span>15 REAIS</span></li>
+							<li class="certo" id="respostasPostodeGasolina"><span>30 REAIS</span></li>
+							<li id="respostasPostodeGasolina"><span>40 REAIS</span></li>
+						</ul>
+					</div>
+				</div>
+				<!-- END CONTEUDO -->
+			</div>
+
+			<div class="placas MecanicaPai">
+				<div class="cordenadas oficinaMecanica"></div>
+				<div class="placa eventMecanica"><img src="img/pl-oficinaMecanica.png" alt=""></div>
+				<!-- CONTEUDO -->
+				<div class="pergunta perguntaMecanicaPai">
+					<div class="conteudo">
+						<!-- POPUP -->
+						<div class="popupAcerto acertoMecanica">
+							<div class="texto">
+								<p>Muito bem! Vamos continuar a fazer os preparativos para a viagem!</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninaPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupErro erroMecanica">
+							<div class="texto">
+								<p>Este não foi o valor que vocês gastaram. Tente outra vez.</p>
+							</div>
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupTerceiroErro terceiroAcertoMecanica">
+							<div class="texto">
+								<p>Adorei sua companhia, mas não conseguimos terminar de fazer os preparativos para a viagem. Vamos jogar novamente?</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninaPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+						<p>Vocês tiveram de trocar 2 pneus do carro e ainda 1 lâmpada que estava queimada. Cada pneu custou 40 reais, e a lâmpada 5 reais. Quanto vocês gastaram na oficina?</p>
+						<img class="imgPrincipal" src="img/imagem3.png">
+						<div class="acertos">
+							<ul class="cabecas">
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+							</ul>
+						</div>
+						<ul class="respostas">
+							<li id="respostasMecanica"><span>30 REAIS</span></li>
+							<li id="respostasMecanica"><span>50 REAIS</span></li>
+							<li id="respostasMecanica"><span>45 REAIS</span></li>
+							<li class="certo" id="respostasMecanica"><span>85 REAIS</span></li>
+							<li id="respostasMecanica"><span>80 REAIS</span></li>
+						</ul>
+					</div>
+				</div>
+				<!-- END CONTEUDO -->
+			</div>
+
+			<div class="placas LojaDeAnimaisPai">
+				<div class="cordenadas lojaDeAnimais"></div>
+				<div class="placa eventLojaDeAnimais"><img src="img/pl-lojaDeAnimais.png" alt=""></div>
+				<!-- CONTEUDO -->
+				<div class="pergunta perguntaLojaDeAnimais">
+					<div class="conteudo">
+						<!-- POPUP -->
+						<div class="popupAcerto acertoAnimais">
+							<div class="texto">
+								<p>Muito bem! Vamos continuar a fazer os preparativos para a viagem!</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninaPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupErro erroAnimais">
+							<div class="texto">
+								<p>Esse não foi o produto mais caro. Tente outra vez.</p>
+							</div>
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupTerceiroErro terceiroErroAnimais">
+							<div class="texto">
+								<p>Adorei sua companhia, mas não conseguimos terminar de fazer os preparativos para a viagem. Vamos jogar novamente?</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninaPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+						<p>Vocês compraram para o Rex a ração, que custou 50 reais; o biscoito, que custou 4 reais; o sabonete, que custou 6 reais; e uma coleira, que custou 10 reais. Qual dos quatro produtos foi o mais caro?</p>
+						<img class="imgPrincipal" src="img/imagem6.png">
+						<div class="acertos">
+							<ul class="cabecas">
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+								<li><img src="img/kbcaMenina.png" alt=""></li>
+							</ul>
+						</div>
+						<ul class="respostas">
+							<li id="respostasAnimais"><span>NENHUM</span></li>
+							<li class="certo" id="respostasAnimais"><span>A RAÇÃO</span></li>
+							<li id="respostasAnimais"><span>O BISCOITO</span></li>
+							<li id="respostasAnimais"><span>O SABONETE</span></li>
+							<li id="respostasAnimais"><span>A COLEIRA</span></li>
+						</ul>
+					</div>
+				</div>
+				<!-- END CONTEUDO -->
+			</div>
+
+
+		</div>
+		<!-- END GAME 1 MASCULINO -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- GAME 2 FEMENINO-->
+
+		<div class="game2">
+
+			<div class="superMercadoNoClick"></div>
+			<div class="suaCasaNoClick"></div>
+			<div class="lojaDeMalasNoClick"></div>
+			<div class="casaDosAvosNoClick"></div>
+			<div class="padariaNoClick"></div>
+			<div class="postoDeGasolinaNoClick"></div>
+			<div class="oficinaMecanicaNoClick"></div>
+			<div class="lojaDeAnimaisNoClick"></div>
+			
+			
+			<!-- POPUP INICIAL -->
+			<div class="popupBG">
+				<div class="close">
+					<h1>Fechar</h1>
+				</div>
+				<p>O Sol está de rachar. Se nossa pele não queremos queimar, um guarda-sol e um protetor teremos de comprar.
+				Olhe o mapa e descubra onde esses itens encontrar.</p>
+			</div>
+			<!-- END POPUP INICIAL -->
+
+			<!-- POPUP INICIAL -->
+			<div class="popupSuperMercadoAvance">
+				<div class="close">
+					<h1>Fechar</h1>
+				</div>
+				<p>Como a viagem é longa, pãozinho nós vamos levar. Não podemos nos esquecer de uma garrafa de água também comprar. Descubra onde esses itens encontrar.</p>
+			</div>
+			<!-- END POPUP INICIAL -->
+
+			<!-- POPUP INICIAL -->
+			<div class="popupPadariaAvance">
+				<div class="close">
+					<h1>Fechar</h1>
+				</div>
+				<p>Muitas coisas vocês já puderam comprar, mas agora do carro têm de cuidar.</p>
+			</div>
+			<!-- END POPUP INICIAL -->
+
+			<!-- POPUP INICIAL -->
+			<div class="popupOficinaMecanicaAvance">
+				<div class="close">
+					<h1>Fechar</h1>
+				</div>
+				<p>Agora o carro está em ordem e vocês já podem viajar, mas falta um detalhe para o carro andar.</p>
+			</div>
+			<!-- END POPUP INICIAL -->
+
+			<!-- POPUP INICIAL -->
+			<div class="popupPostoDeGasolinaAvance">
+				<div class="close">
+					<h1>Fechar</h1>
+				</div>
+				<p>O carro está pronto para viajar, mas vocês não têm a mala para arrumar.</p>
+			</div>
+			<!-- END POPUP INICIAL -->
+
+			<!-- POPUP INICIAL -->
+			<div class="popupLojaDeMalasAvance">
+				<div class="close">
+					<h1>Fechar</h1>
+				</div>
+				<p>As malas vocês já têm para viajar, agora vão para casa a fim de as malas arrumar. Mas, antes, comida e acessórios para o Rex têm de comprar.</p>
+			</div>
+			<!-- END POPUP INICIAL -->
+
+			<!-- POPUP INICIAL -->
+			<div class="popupLojaDeAnimaisAvance">
+				<div class="close">
+					<h1>Fechar</h1>
+				</div>
+				<p>A viagem está quase pronta, mas vocês precisam abrir o cofrinho para um sorvete tomar.</p>
+			</div>
+			<!-- END POPUP INICIAL -->
+
+			<!-- POPUP INICIAL -->
+			<div class="popupSuaCasaAvance">
+				<div class="close">
+					<h1>Fechar</h1>
+				</div>
+				<p>Chegou a hora de viajar e nossos queridos avós chamar.</p>
+			</div>
+			<!-- END POPUP INICIAL -->
+
+			<div class="placas SuperMercadoPai">
+				<div class="cordenadas supermercado"></div>
+				<div class="placa eventsupermercado"><img src="img/pl-supermercado.png" alt=""></div>
+				<!-- CONTEUDO -->
+				<div class="pergunta">
+					<div class="conteudo">
+						<!-- POPUP -->
+						<div class="popupAcerto">
+							<div class="texto">
+								<p>Muito bem! Vamos continuar a fazer os preparativos para a viagem!</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninoPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupErro">
+							<div class="texto">
+								<p>Este não foi o valor que vocês gastaram. Tente outra vez.</p>
+							</div>
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupTerceiroErro">
+							<div class="texto">
+								<p>Adorei sua companhia, mas não conseguimos terminar de fazer os preparativos para a viagem. Vamos jogar novamente?</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninoPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+
+						<p>O guarda-sol custa 12 reais, e o protetor solar 7 reais. Quantos reais vocês gastaram para comprar os dois itens?</p>
+						<img class="imgPrincipal" src="img/imagem1.png">
+						<div class="acertos">
+							<ul class="cabecas">
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+							</ul>
+						</div>
+						<ul class="respostas">
+							<li id="respostasSupermercado"><span>10 REAIS</span></li>
+							<li id="respostasSupermercado"><span>15 REAIS</span></li>
+							<li id="respostasSupermercado"><span>20 REAIS</span></li>
+							<li class="certo" id="respostasSupermercado"><span>19 REAIS</span></li>
+							<li id="respostasSupermercado"><span>17 REAIS</span></li>
+						</ul>
+					</div>
+				</div>
+				<!-- END CONTEUDO -->
+			</div>
+
+			<div class="placas SuaCasaPai">
+				<div class="cordenadas suaCasa"></div>
+				<div class="placa eventSuaCasa"><img src="img/pl-suaCasa.png" alt=""></div>
+				<!-- CONTEUDO -->
+				<div class="pergunta">
+					<div class="conteudo">
+						<!-- POPUP -->
+						<div class="popupAcerto">
+							<div class="texto">
+								<p>Muito bem! Vamos continuar a fazer os preparativos para a viagem!</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninoPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupErro">
+							<div class="texto">
+								<p>Seria possível obter esse valor. Tente outra vez.</p>
+							</div>
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupTerceiroErro">
+							<div class="texto">
+								<p>Adorei sua companhia, mas não conseguimos terminar de fazer os preparativos para a viagem. Vamos jogar novamente?</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninoPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+						<p>Antes da viagem, abram seu cofrinho. Nele encontrarão cédulas de 10 reais e de 5 reais. Qual destes valores vocês não conseguiriam obter, mesmo juntando todas as cédulas?</p>
+						<img class="imgPrincipal" src="img/imagem7.png">
+						<div class="acertos">
+							<ul class="cabecas">
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+							</ul>
+						</div>
+						<ul class="respostas">
+							<li id="respostasSuaCasa"><span>75 REAIS</span></li>
+							<li class="certo" id="respostasSuaCasa"><span>87 REAIS</span></li>
+							<li id="respostasSuaCasa"><span>65 REAIS</span></li>
+							<li id="respostasSuaCasa"><span>50 REAIS</span></li>
+							<li id="respostasSuaCasa"><span>15 REAIS</span></li>
+						</ul>
+					</div>
+				</div>
+				<!-- END CONTEUDO -->
+			</div>
+
+			<div class="placas LojaDeMalasPai">
+				<div class="cordenadas lojaDeMalas"></div>
+				<div class="placa eventLojaDeMalas"><img src="img/pl-lojaDeMalas.png" alt=""></div>
+				<!-- CONTEUDO -->
+				<div class="pergunta perguntaLojaDeMalas">
+					<div class="conteudo">
+						<!-- POPUP -->
+						<div class="popupAcerto acertoLojaDeMalas">
+							<div class="texto">
+								<p>Muito bem! Vamos continuar a fazer os preparativos para a viagem!</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninoPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupErro erroLojaDeMalas">
+							<div class="texto">
+								<p>Não foram estas as malas que vocês compraram. Tente outra vez.</p>
+							</div>
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupTerceiroErro terceiroErroLojaDeMalas">
+							<div class="texto">
+								<p>Adorei sua companhia, mas não conseguimos terminar de fazer os preparativos para a viagem. Vamos jogar novamente?</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninoPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+						<p>Vocês compraram 2 malas e gastaram 68 reais. Que malas compraram?</p>
+						<img class="imgPrincipal" src="img/imagem5.png">
+						<div class="acertos">
+							<ul class="cabecas">
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+							</ul>
+						</div>
+						<ul class="respostas">
+							<li id="respostasMalas"><span>MALA 2</span></li>
+							<li id="respostasMalas"><span>MALAS 1 E 2</span></li>
+							<li class="certo" id="respostasMalas"><span>MALAS 1 E 3</span></li>
+							<li id="respostasMalas"><span>MALAS 1 E 4</span></li>
+							<li id="respostasMalas"><span>MALAS 3 E 4</span></li>
+						</ul>
+					</div>
+				</div>
+				<!-- END CONTEUDO -->
+			</div>
+
+			<div class="placas CasaDosAvosPai">
+				<div class="cordenadas casaDosAvos"></div>
+				<div class="placa eventCasaDosAvos"><img src="img/pl-casaDosAvos.png" alt=""></div>
+				<!-- CONTEUDO -->
+				<div class="pergunta">
+					<div class="conteudo">
+						<!-- POPUP -->
+						<div class="popupAcerto acertoCasaDaVo">
+							<div class="texto">
+								<p>Muito obrigado pela ajuda! Praia, aí vamos nós!</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninoPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupErro erroCasaDaVo">
+							<div class="texto">
+								<p>Não é essa quantia que temos. Tente outra vez.</p>
+							</div>
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupTerceiroErro terceiroErroCasaDaVo">
+							<div class="texto">
+								<p>Adorei sua companhia, mas não conseguimos terminar de fazer os preparativos para a viagem. Vamos jogar novamente?</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninoPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+						<p>Quando chegamos à casa de nossos avós, ganhamos 14 reais da vovó e 15 reais do vovô. Nós já tínhamos 50 reais, que retiramos do cofrinho. Quanto temos agora para levar na viagem?</p>
+						<img class="imgPrincipal" src="img/imagem8.png">
+						<div class="acertos">
+							<ul class="cabecas">
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+							</ul>
+						</div>
+						<ul class="respostas">
+							<li id="respostasAvos"><span>14 REAIS</span></li>
+							<li id="respostasAvos"><span>15 REAIS</span></li>
+							<li id="respostasAvos"><span>29 REAIS</span></li>
+							<li class="certo" id="respostasAvos"><span>79 REAIS</span></li>
+							<li id="respostasAvos"><span>50 REAIS</span></li>
+						</ul>
+					</div>
+				</div>
+				<!-- END CONTEUDO -->
+			</div>
+
+			<div class="placas PadariaPai">
+				<div class="cordenadas padaria"></div>
+				<div class="placa eventPadaria"><img src="img/pl-padaria.png" alt=""></div>
+				<!-- CONTEUDO -->
+				<div class="pergunta perguntaPadaria">
+					<div class="conteudo">
+						<!-- POPUP -->
+						<div class="popupAcerto acertoPadaria">
+							<div class="texto">
+								<p>Muito bem! Vamos continuar a fazer os preparativos para a viagem!</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninoPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupErro erroPadaria">
+							<div class="texto">
+								<p>Este não foi o valor que vocês gastaram. Tente outra vez.</p>
+							</div>
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupTerceiroErro terceiroErroPadaria">
+							<div class="texto">
+								<p>Adorei sua companhia, mas não conseguimos terminar de fazer os preparativos para a viagem. Vamos jogar novamente?</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninoPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+						<p>O pão custou 4 reais, e a garrafa de água 3 reais. Quanto vocês gastaram nessa compra?</p>
+						<img class="imgPrincipal" src="img/imagem2.png">
+						<div class="acertos">
+							<ul class="cabecas">
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+							</ul>
+						</div>
+						<ul class="respostas">
+							<li id="respostasPadaria"><span>10 REAIS</span></li>
+							<li id="respostasPadaria"><span>5 REAIS</span></li>
+							<li class="certo" id="respostasPadaria"><span>7 REAIS</span></li>
+							<li id="respostasPadaria"><span>4 REAIS</span></li>
+							<li id="respostasPadaria"><span>12 REAIS</span></li>
+						</ul>
+					</div>
+				</div>
+				<!-- END CONTEUDO -->
+			</div>
+
+			<div class="placas PostoDeGasolinaPai">
+				<div class="cordenadas postoDeGasolina"></div>
+				<div class="placa eventPostoDeGasolina"><img src="img/pl-postoDeGasolina.png" alt=""></div>
+				<!-- CONTEUDO -->
+				<div class="pergunta">
+					<div class="conteudo">
+						<!-- POPUP -->
+						<div class="popupAcerto">
+							<div class="texto">
+								<p>Muito bem! Vamos continuar a fazer os preparativos para a viagem!</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninoPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupErro">
+							<div class="texto">
+								<p>Esse não foi o valor que vocês receberam de troco. Tente outra vez.</p>
+							</div>
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupTerceiroErro">
+							<div class="texto">
+								<p>Adorei sua companhia, mas não conseguimos terminar de fazer os preparativos para a viagem. Vamos jogar novamente?</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninoPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+						<p>Vocês gastaram 20 reais para colocar gasolina e pagaram com uma nota de 50 reais. Quanto devem receber de troco?</p>
+						<img class="imgPrincipal" src="img/imagem4.png">
+						<div class="acertos">
+							<ul class="cabecas">
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+							</ul>
+						</div>
+						<ul class="respostas">
+							<li id="respostasPostodeGasolina"><span>20 REAIS</span></li>
+							<li id="respostasPostodeGasolina"><span>10 REAIS</span></li>
+							<li id="respostasPostodeGasolina"><span>15 REAIS</span></li>
+							<li class="certo" id="respostasPostodeGasolina"><span>30 REAIS</span></li>
+							<li id="respostasPostodeGasolina"><span>40 REAIS</span></li>
+						</ul>
+					</div>
+				</div>
+				<!-- END CONTEUDO -->
+			</div>
+
+			<div class="placas MecanicaPai">
+				<div class="cordenadas oficinaMecanica"></div>
+				<div class="placa eventMecanica"><img src="img/pl-oficinaMecanica.png" alt=""></div>
+				<!-- CONTEUDO -->
+				<div class="pergunta perguntaMecanicaPai">
+					<div class="conteudo">
+						<!-- POPUP -->
+						<div class="popupAcerto acertoMecanica">
+							<div class="texto">
+								<p>Muito bem! Vamos continuar a fazer os preparativos para a viagem!</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninoPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupErro erroMecanica">
+							<div class="texto">
+								<p>Este não foi o valor que vocês gastaram. Tente outra vez.</p>
+							</div>
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupTerceiroErro terceiroAcertoMecanica">
+							<div class="texto">
+								<p>Adorei sua companhia, mas não conseguimos terminar de fazer os preparativos para a viagem. Vamos jogar novamente?</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninoPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+						<p>Vocês tiveram de trocar 2 pneus do carro e ainda 1 lâmpada que estava queimada. Cada pneu custou 40 reais, e a lâmpada 5 reais. Quanto vocês gastaram na oficina?</p>
+						<img class="imgPrincipal" src="img/imagem3.png">
+						<div class="acertos">
+							<ul class="cabecas">
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+							</ul>
+						</div>
+						<ul class="respostas">
+							<li id="respostasMecanica"><span>30 REAIS</span></li>
+							<li id="respostasMecanica"><span>50 REAIS</span></li>
+							<li id="respostasMecanica"><span>45 REAIS</span></li>
+							<li class="certo" id="respostasMecanica"><span>85 REAIS</span></li>
+							<li id="respostasMecanica"><span>80 REAIS</span></li>
+						</ul>
+					</div>
+				</div>
+				<!-- END CONTEUDO -->
+			</div>
+
+			<div class="placas LojaDeAnimaisPai">
+				<div class="cordenadas lojaDeAnimais"></div>
+				<div class="placa eventLojaDeAnimais"><img src="img/pl-lojaDeAnimais.png" alt=""></div>
+				<!-- CONTEUDO -->
+				<div class="pergunta perguntaLojaDeAnimais">
+					<div class="conteudo">
+						<!-- POPUP -->
+						<div class="popupAcerto acertoAnimais">
+							<div class="texto">
+								<p>Muito bem! Vamos continuar a fazer os preparativos para a viagem!</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninoPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupErro erroAnimais">
+							<div class="texto">
+								<p>Esse não foi o produto mais caro. Tente outra vez.</p>
+							</div>
+						</div>
+						<!-- POPUP -->
+
+						<!-- POPUP -->
+						<div class="popupTerceiroErro terceiroErroAnimais">
+							<div class="texto">
+								<p>Adorei sua companhia, mas não conseguimos terminar de fazer os preparativos para a viagem. Vamos jogar novamente?</p>
+								<img class="setaPopup" src="img/setaPopup.png" alt="">
+							</div>
+							<img class="meninaPopup" src="img/meninoPopup.png" alt="">
+						</div>
+						<!-- POPUP -->
+						<p>Vocês compraram para o Rex a ração, que custou 50 reais; o biscoito, que custou 4 reais; o sabonete, que custou 6 reais; e uma coleira, que custou 10 reais. Qual dos quatro produtos foi o mais caro?</p>
+						<img class="imgPrincipal" src="img/imagem6.png">
+						<div class="acertos">
+							<ul class="cabecas">
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+								<li><img src="img/kbcaMenino.png" alt=""></li>
+							</ul>
+						</div>
+						<ul class="respostas">
+							<li id="respostasAnimais"><span>NENHUM</span></li>
+							<li class="certo" id="respostasAnimais"><span>A RAÇÃO</span></li>
+							<li id="respostasAnimais"><span>O BISCOITO</span></li>
+							<li id="respostasAnimais"><span>O SABONETE</span></li>
+							<li id="respostasAnimais"><span>A COLEIRA</span></li>
+						</ul>
+					</div>
+				</div>
+				<!-- END CONTEUDO -->
+			</div>
+
+
+		</div>
+
+		<!-- END GAME 2 FEMENINO-->
+		
+
+		
+
+
+	</div>
+<!-- Final code -->
+<!-- <img src="img/background.jpg" alt="" width="1024" height="660" class="blurBck"> -->
+</div>
+
+</body>	
+</html>

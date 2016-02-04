@@ -1,0 +1,852 @@
+@font-face {
+    font-family: 'MyriadProRegular';
+    src: url('myriadpro-regular.eot');
+    src: url('myriadpro-regular.eot') format('embedded-opentype'),
+         url('myriadpro-regular.woff') format('woff'),
+         url('myriadpro-regular.ttf') format('truetype'),
+         url('myriadpro-regular.svg#MyriadProRegular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+    font-family: 'MyriadProLight';
+    src: url('myriadpro-light.eot');
+    src: url('myriadpro-light.eot') format('embedded-opentype'),
+         url('myriadpro-light.woff') format('woff'),
+         url('myriadpro-light.ttf') format('truetype'),
+         url('myriadpro-light.svg#MyriadProLight') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+    font-family: 'proxima_novalight';
+    src: url('proximanova-light-webfont.eot');
+    src: url('proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('proximanova-light-webfont.woff') format('woff'),
+         url('proximanova-light-webfont.ttf') format('truetype'),
+         url('proximanova-light-webfont.svg#proxima_novalight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'proxima_nova_rgregular';
+    src: url('proximanova-regular-webfont.eot');
+    src: url('proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('proximanova-regular-webfont.woff') format('woff'),
+         url('proximanova-regular-webfont.ttf') format('truetype'),
+         url('proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body{
+	font-family: 'MyriadProLight';
+}
+#loading {
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background-color:#efefef;	
+	z-index:9001;
+	text-align:center;
+	font-family: 'proxima_novalight';
+	font-size:16px;
+}
+#loading img {
+	display:block;
+	margin:250px auto 15px auto;
+}
+#capa {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:#C33 url(../img/capa.png) no-repeat center;
+	z-index:9000;
+	display:none;
+}
+#capa .header {
+	display:none;
+	width:1090px;
+	height:330px;
+	background:url(../img/capa-header.png) no-repeat left top;	
+	margin:25px 0 0 29px;
+	padding:1px 0;
+	transition:all .5s ease;
+	-moz-transition:all 1s ease;
+	-ms-transition:all 1s ease;
+	-o-transition:all 1s ease;
+	-webkit-transition:all 1s ease;
+}
+#capa .header h1 {
+	display:block;
+	width:700px;
+	height:50px;
+	text-align:left;
+	padding:1px;
+	margin:24px 0 0 30px;
+	font-family: 'MyriadProRegular';
+	font-size:43px;
+	color:#FFF;
+	font-weight:normal;
+	text-transform:uppercase;
+}
+#capa .subheader {
+	position: relative;
+	width:577px;
+	display:block;
+	opacity:0;
+	margin:-75px 0 0 33px;
+	padding:10px 15px 5px 15px;
+	background-color:#F60;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	transition:all .5s ease;
+	-moz-transition:all .5s ease;
+	-ms-transition:all .5s ease;
+	-o-transition:all .5s ease;
+	-webkit-transition:all .5s ease;
+	transition-delay:.2s;
+	-webkit-transition-delay:.2s;
+	-o-transition-delay:.2s;
+	-moz-transition-delay:.2s;
+
+}
+#capa .subheader p {
+	font-family: 'MyriadProRegular';
+	color:#fff;
+	font-size:35px;
+	padding:0;
+	margin:0;
+	text-transform:uppercase;
+}
+
+#capa .acoes {
+	position:absolute;
+	bottom:0;
+	right:0;
+	width:230px;
+	height:180px;
+}
+#capa .acoes div:first-child {
+	display:none;
+	float:right;
+	width:100px;
+	border:3px solid #fff;
+	margin:55px 30px 0 0;
+	padding:8px 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	font-family: 'proxima_nova_rgregular';
+	font-size:30px;
+	color:#FFF;
+	text-transform:uppercase;
+	cursor:pointer;
+	transition:all .5s ease-out;
+	-moz-transition:all .5s ease-out;
+	-ms-transition:all .5s ease-out;
+	-o-transition:all .5s ease-out;
+	-webkit-transition:all .5s ease-out;
+}
+#capa .acoes div:first-child:hover {
+	transform:scale(1.1);
+	-webkit-transform:scale(1.1);
+}
+#capa .acoes div:nth-child(2) {
+	display:none;
+	width:68px;
+	margin:120px 0 0 85px;
+	text-shadow:0 0 5px #000;
+	padding:6px 10px 3px 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	font-family: 'MyriadProLight';
+	font-size:23px;
+	color:#fff;
+	cursor:pointer;
+	transition:all .5s ease-out;
+	-moz-transition:all .5s ease-out;
+	-ms-transition:all .5s ease-out;
+	-o-transition:all .5s ease-out;
+	-webkit-transition:all .5s ease-out;
+}
+#capa .acoes div:nth-child(2):hover {
+	text-decoration:underline;
+}
+#creditos {
+	display:none;
+	position:relative;
+	width:700px; 
+	height:400px;
+	background-color:#FFF;
+	margin:50px 0 0 30px;
+}
+#creditos .barraLogo {
+	float:left;
+	width:120px;
+	height:380px;
+	padding:10px;
+	background-color:#292a67;
+}
+#creditos h2 {
+	width:300px;
+	float:left;
+	font-family: 'proxima_novalight';
+	color:#292a67;
+	font-size:34px;
+	font-weight:normal;
+	padding:20px 0 0 20px;
+	margin:0;
+}
+#creditos .boxText {
+	width:520px;
+	height:261px;
+	overflow:hidden;
+	float:left;
+	margin:-330px 0 0 160px;
+}
+#creditos .boxTextMask {
+	position:absolute;
+	width:520px;
+	height:261px;
+	z-index:300;
+	margin:70px 0 0 160px;
+	background:url(../img/bgCreditosText.png) no-repeat left top;
+}
+#creditos .boxText .text-creditos {
+	display:block;
+	margin:261px 0 0 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:11px;
+	line-height:180%;
+}
+#creditos .btnFechaCreditos {
+	position:absolute;
+	bottom:20px;
+	right:20px;
+	width:55px;
+	height:15px;
+	border:2px solid #666;
+	margin:110px 0 0 100px;
+	padding:6px 10px 3px 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	font-family: 'proxima_nova_rgregular';
+	font-size:14px;
+	color:#666;
+	background:#ffffff;
+	text-transform:uppercase;
+	cursor:pointer;
+}
+.container {
+	width:1024px;
+	height:660px; 
+	overflow:hidden; 
+	display:block; 
+	position:absolute; 
+	padding:0; 
+	top:50%; 
+	left:50%; 
+	margin:-330px 0 0 -512px;
+	outline:1px solid rgba(0,0,0,0.3);
+	cursor:default;
+}
+#header {
+	position:relative;
+	width:1024px;
+	height:60px;
+	top:0;
+	border-bottom:3px solid #fff;
+	display:none;
+}
+#header .icon {
+	width:60px;
+	height:60px;
+	float:left;
+	border-right:3px solid #fff;
+}
+.imghome {
+	background:url(../img/btnHome.png) no-repeat 11px 12px;
+	cursor:pointer;
+}
+#header h1 {
+	display:block;
+	width:875px;
+	float:left;
+	margin:0;
+	padding:2px 0 0 20px;
+	font-family: 'MyriadProRegular';
+	text-transform:uppercase;
+	-webkit-font-smoothing: antialiased;
+	text-shadow:1px 1px 1px rgba(0,0,0,0.5);
+	font-size:46px;
+	font-weight:normal;
+	color:white;
+}
+#header #btnOptions {
+	width:63px;
+	height:78px;
+	position:absolute;
+	right:0;
+	z-index:900;
+	transition:all .5s ease;
+	-moz-transition:all .5s ease;
+	-ms-transition:all .5s ease;
+	-o-transition:all .5s ease;
+	-webkit-transition:all .5s ease;
+}
+#header #btnOptions:hover {
+	height:88px;
+}
+#header #btnOptions .actionOptions {
+	display:block;
+	width:60px;
+	height:62px;
+	margin:0 0 0 3px;
+	cursor:pointer;
+	background:url(../img/btnInstrucoes.png) no-repeat 11px 15px;
+}
+ul#navOptions {
+	display:none;
+	position:absolute;
+	list-style:none;
+	top:0;
+	right:0;
+	padding:0;
+	margin:0;
+	z-index:110;
+	margin:60px 0 0 0;
+}
+ul#navOptions li {
+	display:block;
+	margin:0 auto;
+	padding:37px 9px 0 0;
+	cursor:pointer;
+	transition:all .5s ease;
+	-moz-transition:all .5s ease;
+	-ms-transition:all .5s ease;
+	-o-transition:all .5s ease;
+	-webkit-transition:all .5s ease;	
+}
+ul#navOptions li:hover {
+	opacity:0.3;
+}
+.overlayOptions {
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0);
+	z-index:91;
+}
+#instrucoes {
+	display:none;
+	position:absolute;
+	right:5px;
+	top:70px;
+	margin:0;
+	z-index:799;
+	padding:20px;
+	color:#fff;
+	text-shadow:1px 1px 0 rgba(0,0,0,.3);
+	background-color:#FF0;
+	border:3px solid rgba(255,255,255,0.5);
+}
+#instrucoes p {
+	padding:15px;
+	margin:0;
+	font-family: 'MyriadProLight';
+	font-size:23px;
+	color:#fff;
+}
+.spcint {
+	display:inline-block;
+	padding-left:1px;
+	width:1px;
+}
+
+
+
+
+
+
+
+/***************************************************************** OBJETO */
+
+
+
+
+
+
+
+
+
+
+/*POPUP*/
+.popup {
+  background: url(../img/changeGame.png) no-repeat center top white;
+  background-size: 100% 100%;
+  border: 3px solid #ff8400;
+  border-radius: 10px;
+  height: 85%;
+  margin: 1.5% 4.5%;
+  position: absolute;
+  width: 90%;
+  display: none;
+  z-index: 99; }
+  .popup .text {
+    width: 80%;
+    height: 140px;
+    background: none rgba(236, 236, 236, 0.9);
+    display: none;
+    margin: 6% 10%;
+    border-radius: 7px; }
+    .popup .text p {
+      font-family: "MyriadProLight";
+      font-size: 24px;
+      text-align: center;
+      width: 90%;
+      padding: 3.3% 4.5%; }
+  .popup .gameMenina {
+    position: absolute;
+    border: 0px solid red;
+    bottom: 20px;
+    left: 27%;
+    cursor: pointer; }
+  .popup .gameMenino {
+    position: absolute;
+    border: 0px solid red;
+    bottom: 20px;
+    right: 24%;
+    cursor: pointer; }
+
+.telaPreta {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: none rgba(0, 0, 0, 0.9);
+  z-index: 8;
+  display: none; }
+
+.game1, .game2 {
+  width: 100%;
+  height: 660px;
+  display: none; }
+
+.game1, .game2 {
+  background: url(../img/bgGame1.png); }
+  .game1 .superMercadoNoClick, .game2 .superMercadoNoClick {
+    width: 116px;
+    height: 177px;
+    position: absolute;
+    left: 44px;
+    top: 176px;
+    border: 0px solid red;
+    z-index: 40; }
+  .game1 .padariaNoClick, .game2 .padariaNoClick {
+    width: 114px;
+    height: 177px;
+    position: absolute;
+    left: 646px;
+    top: 72px;
+    border: 0px solid red;
+    z-index: 40; }
+  .game1 .suaCasaNoClick, .game2 .suaCasaNoClick {
+    width: 116px;
+    height: 180px;
+    position: absolute;
+    left: 117px;
+    top: 329px;
+    border: 0px solid red;
+    z-index: 40; }
+  .game1 .lojaDeMalasNoClick, .game2 .lojaDeMalasNoClick {
+    width: 114px;
+    height: 177px;
+    position: absolute;
+    left: 320px;
+    top: 201px;
+    border: 0px solid red;
+    z-index: 40; }
+  .game1 .casaDosAvosNoClick, .game2 .casaDosAvosNoClick {
+    width: 116px;
+    height: 177px;
+    position: absolute;
+    left: 398px;
+    top: 388px;
+    border: 0px solid red;
+    z-index: 40; }
+  .game1 .postoDeGasolinaNoClick, .game2 .postoDeGasolinaNoClick {
+    width: 114px;
+    height: 177px;
+    position: absolute;
+    left: 628px;
+    top: 473px;
+    border: 0px solid red;
+    z-index: 40; }
+  .game1 .oficinaMecanicaNoClick, .game2 .oficinaMecanicaNoClick {
+    width: 116px;
+    height: 177px;
+    position: absolute;
+    left: 831px;
+    top: 123px;
+    border: 0px solid red;
+    z-index: 40; }
+  .game1 .lojaDeAnimaisNoClick, .game2 .lojaDeAnimaisNoClick {
+    width: 114px;
+    height: 177px;
+    position: absolute;
+    left: 859px;
+    top: 375px;
+    border: 0px solid red;
+    z-index: 40; }
+  .game1 .popupBG, .game1 .popupSuperMercadoAvance, .game1 .popupPadariaAvance, .game1 .popupOficinaMecanicaAvance, .game1 .popupPostoDeGasolinaAvance, .game1 .popupLojaDeMalasAvance, .game1 .popupLojaDeAnimaisAvance, .game1 .popupSuaCasaAvance, .game2 .popupBG, .game2 .popupSuperMercadoAvance, .game2 .popupPadariaAvance, .game2 .popupOficinaMecanicaAvance, .game2 .popupPostoDeGasolinaAvance, .game2 .popupLojaDeMalasAvance, .game2 .popupLojaDeAnimaisAvance, .game2 .popupSuaCasaAvance {
+    background: #fff;
+    border: 3px solid #FF8400;
+    border-radius: 10px;
+    margin: 18% 5%;
+    position: absolute;
+    width: 90%;
+    z-index: 80;
+    display: none; }
+    .game1 .popupBG .close, .game1 .popupSuperMercadoAvance .close, .game1 .popupPadariaAvance .close, .game1 .popupOficinaMecanicaAvance .close, .game1 .popupPostoDeGasolinaAvance .close, .game1 .popupLojaDeMalasAvance .close, .game1 .popupLojaDeAnimaisAvance .close, .game1 .popupSuaCasaAvance .close, .game2 .popupBG .close, .game2 .popupSuperMercadoAvance .close, .game2 .popupPadariaAvance .close, .game2 .popupOficinaMecanicaAvance .close, .game2 .popupPostoDeGasolinaAvance .close, .game2 .popupLojaDeMalasAvance .close, .game2 .popupLojaDeAnimaisAvance .close, .game2 .popupSuaCasaAvance .close {
+      background: #FF8400;
+      border-radius: 0 0 10px 10px;
+      cursor: pointer;
+      float: right;
+      height: 50px;
+      left: 40%;
+      position: absolute;
+      bottom: -50px;
+      width: 150px; }
+      .game1 .popupBG .close h1, .game1 .popupSuperMercadoAvance .close h1, .game1 .popupPadariaAvance .close h1, .game1 .popupOficinaMecanicaAvance .close h1, .game1 .popupPostoDeGasolinaAvance .close h1, .game1 .popupLojaDeMalasAvance .close h1, .game1 .popupLojaDeAnimaisAvance .close h1, .game1 .popupSuaCasaAvance .close h1, .game2 .popupBG .close h1, .game2 .popupSuperMercadoAvance .close h1, .game2 .popupPadariaAvance .close h1, .game2 .popupOficinaMecanicaAvance .close h1, .game2 .popupPostoDeGasolinaAvance .close h1, .game2 .popupLojaDeMalasAvance .close h1, .game2 .popupLojaDeAnimaisAvance .close h1, .game2 .popupSuaCasaAvance .close h1 {
+        color: #fff;
+        font-size: 31px;
+        font-family: "MyriadProLight";
+        font-weight: normal;
+        text-align: center;
+        margin: 4px; }
+    .game1 .popupBG p, .game1 .popupSuperMercadoAvance p, .game1 .popupPadariaAvance p, .game1 .popupOficinaMecanicaAvance p, .game1 .popupPostoDeGasolinaAvance p, .game1 .popupLojaDeMalasAvance p, .game1 .popupLojaDeAnimaisAvance p, .game1 .popupSuaCasaAvance p, .game2 .popupBG p, .game2 .popupSuperMercadoAvance p, .game2 .popupPadariaAvance p, .game2 .popupOficinaMecanicaAvance p, .game2 .popupPostoDeGasolinaAvance p, .game2 .popupLojaDeMalasAvance p, .game2 .popupLojaDeAnimaisAvance p, .game2 .popupSuaCasaAvance p {
+      font-size: 24px;
+      color: #000;
+      font-weight: normal;
+      text-align: center;
+      font-family: "MyriadProLight";
+      line-height: 170%;
+      width: 90%;
+      padding: 1% 5%;
+      float: left; }
+  .game1 .placas, .game2 .placas {
+    border: 0px solid red;
+    width: 100%;
+    height: 660px; }
+    .game1 .placas .placa, .game2 .placas .placa {
+      cursor: pointer;
+      border: 0px solid red;
+      position: absolute;
+      top: -200px;
+      left: 0;
+      z-index: 30;
+      -webkit-transition: -webkit-transform 0.2s ease-in;
+      /* Changed here */
+      -moz-transition: -moz-transform 0.2s ease-in;
+      -o-transition: -o-transform 0.2s ease-in;
+      transition: transform 0.2s ease-in; }
+    .game1 .placas .placa:hover, .game2 .placas .placa:hover {
+      transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2); }
+
+    .game1 .placas .cordenadas, .game2 .placas .cordenadas{
+    	position: absolute;
+    }  
+    .game1 .placas .cordenadas.supermercado, .game2 .placas .cordenadas.supermercado {
+      left: 44px;
+      top: 176px; }
+    .game1 .placas .cordenadas.suaCasa, .game2 .placas .cordenadas.suaCasa {
+      left: 117px;
+      top: 329px; }
+    .game1 .placas .cordenadas.lojaDeMalas, .game2 .placas .cordenadas.lojaDeMalas {
+      left: 320px;
+      top: 201px; }
+    .game1 .placas .cordenadas.casaDosAvos, .game2 .placas .cordenadas.casaDosAvos {
+      left: 398px;
+      top: 388px; }
+    .game1 .placas .cordenadas.padaria, .game2 .placas .cordenadas.padaria {
+      left: 646px;
+      top: 72px; }
+    .game1 .placas .cordenadas.postoDeGasolina, .game2 .placas .cordenadas.postoDeGasolina {
+      left: 628px;
+      top: 473px; }
+    .game1 .placas .cordenadas.oficinaMecanica, .game2 .placas .cordenadas.oficinaMecanica {
+      left: 831px;
+      top: 123px; }
+    .game1 .placas .cordenadas.lojaDeAnimais, .game2 .placas .cordenadas.lojaDeAnimais {
+      left: 859px;
+      top: 375px; }
+    .game1 .placas .perguntaLojaDeAnimais, .game2 .placas .perguntaLojaDeAnimais {
+      /*top: 14% !important;*/ }
+    .game1 .placas .perguntaPadaria, .game2 .placas .perguntaPadaria {
+      /*top: 17% !important;*/ }
+    .game1 .placas .perguntaMecanicaPai, .game2 .placas .perguntaMecanicaPai {
+      /*top: 14% !important;*/ }
+    .game1 .placas .perguntaLojaDeMalas, .game2 .placas .perguntaLojaDeMalas {
+      /*top: 17% !important;*/ }
+    .game1 .placas .pergunta, .game2 .placas .pergunta {
+      display: none;
+      background: #fff;
+      border-radius: 20px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      -o-border-radius: 20px;
+      top: 8%;
+      box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
+      -ms-box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
+      -o-box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.3);
+      left: 20px;
+      position: absolute;
+      width: 96%;
+      z-index: 80; }
+      .game1 .placas .pergunta .conteudo, .game2 .placas .pergunta .conteudo {
+        float: left;
+        margin: 1% 3%;
+        width: 95%;
+        border: 0px solid red; }
+        .game1 .placas .pergunta .conteudo .acertoAnimais, .game2 .placas .pergunta .conteudo .acertoAnimais {
+          top: 0px !important; }
+        .game1 .placas .pergunta .conteudo .acertoPadaria, .game2 .placas .pergunta .conteudo .acertoPadaria {
+          top: 0px !important; }
+        .game1 .placas .pergunta .conteudo .acertoMecanica, .game2 .placas .pergunta .conteudo .acertoMecanica {
+          top: 0px!important; }
+        .game1 .placas .pergunta .conteudo .acertoLojaDeMalas, .game2 .placas .pergunta .conteudo .acertoLojaDeMalas {
+          top: 0px !important; }
+        .game1 .placas .pergunta .conteudo .acertoCasaDaVo, .game2 .placas .pergunta .conteudo .acertoCasaDaVo {
+          top: 0px !important; }
+        .game1 .placas .pergunta .conteudo .popupAcerto, .game2 .placas .pergunta .conteudo .popupAcerto {
+          background: none rgba(0, 0, 0, 0.7);
+          height: 660px;
+          left: -23px;
+          position: absolute;
+          top: -53px !important;
+          width: 105%;
+          display: none;}
+		  
+          .game1 .placas .pergunta .conteudo .popupAcerto .texto, .game2 .placas .pergunta .conteudo .popupAcerto .texto {
+            background: #fff;
+            border-radius: 20px;
+            left: 360px;
+            padding: 20px;
+            position: absolute;
+            top: -180px;
+            width: 320px; }
+            .game1 .placas .pergunta .conteudo .popupAcerto .texto img.setaPopup, .game2 .placas .pergunta .conteudo .popupAcerto .texto img.setaPopup {
+              left: -45px;
+              position: absolute;
+              top: 37%; }
+            .game1 .placas .pergunta .conteudo .popupAcerto .texto p, .game2 .placas .pergunta .conteudo .popupAcerto .texto p {
+              font-family: "MyriadProLight";
+              font-size: 22px;
+              font-weight: normal; }
+          .game1 .placas .pergunta .conteudo .popupAcerto img.meninaPopup, .game2 .placas .pergunta .conteudo .popupAcerto img.meninaPopup {
+            bottom: 50px;
+            left: -240px;
+            position: absolute; }
+        .game1 .placas .pergunta .conteudo .erroAnimais, .game2 .placas .pergunta .conteudo .erroAnimais {
+          top: 0px !important; }
+        .game1 .placas .pergunta .conteudo .erroPadaria, .game2 .placas .pergunta .conteudo .erroPadaria {
+          top: 0px !important; }
+        .game1 .placas .pergunta .conteudo .erroMecanica, .game2 .placas .pergunta .conteudo .erroMecanica {
+          top: 0px!important; }
+        .game1 .placas .pergunta .conteudo .erroLojaDeMalas, .game2 .placas .pergunta .conteudo .erroLojaDeMalas {
+          top: 0px !important; }
+        .game1 .placas .pergunta .conteudo .erroCasaDaVo, .game2 .placas .pergunta .conteudo .erroCasaDaVo {
+          top: 0px !important; }
+        .game1 .placas .pergunta .conteudo .popupErro, .game2 .placas .pergunta .conteudo .popupErro {
+          background: none rgba(0, 0, 0, 0.7);
+          height: 660px;
+          left: -23px;
+          position: absolute;
+          top: -52px !important;
+          width: 105%;
+          display: none; }
+          .game1 .placas .pergunta .conteudo .popupErro .texto, .game2 .placas .pergunta .conteudo .popupErro .texto {
+            background: #fff;
+            border-radius: 20px;
+            left: 28%;
+            padding: 20px;
+            position: absolute;
+            top: -220px;
+            width: 40%; }
+            .game1 .placas .pergunta .conteudo .popupErro .texto p, .game2 .placas .pergunta .conteudo .popupErro .texto p {
+              font-family: "MyriadProLight";
+              font-size: 22px;
+              font-weight: normal;
+              color: #000;
+              text-align: center; }
+        .game1 .placas .pergunta .conteudo .terceiroErroAnimais, .game2 .placas .pergunta .conteudo .terceiroErroAnimais {
+          top: 0px !important; }
+        .game1 .placas .pergunta .conteudo .terceiroErroPadaria, .game2 .placas .pergunta .conteudo .terceiroErroPadaria {
+          top: 0px !important; }
+        .game1 .placas .pergunta .conteudo .terceiroAcertoMecanica, .game2 .placas .pergunta .conteudo .terceiroAcertoMecanica {
+          top: 0px!important; }
+        .game1 .placas .pergunta .conteudo .terceiroErroLojaDeMalas, .game2 .placas .pergunta .conteudo .terceiroErroLojaDeMalas {
+          top: 0px !important; }
+        .game1 .placas .pergunta .conteudo .terceiroErroCasaDaVo, .game2 .placas .pergunta .conteudo .terceiroErroCasaDaVo {
+          top: 0px !important; }
+        .game1 .placas .pergunta .conteudo .popupTerceiroErro, .game2 .placas .pergunta .conteudo .popupTerceiroErro {
+          background: none rgba(0, 0, 0, 0.7);
+          height: 660px;
+          left: -23px;
+          position: absolute;
+          top: -52px !important;
+          width: 105%;
+          display: none; }
+          .game1 .placas .pergunta .conteudo .popupTerceiroErro .texto, .game2 .placas .pergunta .conteudo .popupTerceiroErro .texto {
+            background: #fff;
+            border-radius: 20px;
+            left: 360px;
+            padding: 20px;
+            position: absolute;
+            top: -220px;
+            width: 320px; }
+            .game1 .placas .pergunta .conteudo .popupTerceiroErro .texto img.setaPopup, .game2 .placas .pergunta .conteudo .popupTerceiroErro .texto img.setaPopup {
+              left: -45px;
+              position: absolute;
+              top: 37%; }
+            .game1 .placas .pergunta .conteudo .popupTerceiroErro .texto p, .game2 .placas .pergunta .conteudo .popupTerceiroErro .texto p {
+              font-family: "MyriadProLight";
+              font-size: 22px;
+              font-weight: normal; }
+          .game1 .placas .pergunta .conteudo .popupTerceiroErro img.meninaPopup, .game2 .placas .pergunta .conteudo .popupTerceiroErro img.meninaPopup {
+            bottom: 50px;
+            left: -240px;
+            position: absolute; }
+        .game1 .placas .pergunta .conteudo p, .game2 .placas .pergunta .conteudo p {
+          float: left;
+          font-size: 22px;
+          border: 0px solid red;
+          width: 100%;
+          margin: 5px 0;
+          padding: 0; }
+        .game1 .placas .pergunta .conteudo img.imgPrincipal, .game2 .placas .pergunta .conteudo img.imgPrincipal {
+          float: left;
+          width: 870px;
+          border: 0px solid red;
+          height: 340px;
+          background: #ccc; }
+        .game1 .placas .pergunta .conteudo .acertos, .game2 .placas .pergunta .conteudo .acertos {
+          float: right;
+          width: 55px;
+          border: 0px solid red; }
+          .game1 .placas .pergunta .conteudo .acertos ul.cabecas, .game2 .placas .pergunta .conteudo .acertos ul.cabecas {
+            float: right;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            border: 0px solid red;
+            list-style: none; }
+            .game1 .placas .pergunta .conteudo .acertos ul.cabecas li, .game2 .placas .pergunta .conteudo .acertos ul.cabecas li {
+              width: 90%;
+              float: left; }
+              .game1 .placas .pergunta .conteudo .acertos ul.cabecas li img, .game2 .placas .pergunta .conteudo .acertos ul.cabecas li img {
+                width: 100%; }
+        .game1 .placas .pergunta .conteudo ul.respostas, .game2 .placas .pergunta .conteudo ul.respostas {
+          float: left;
+          border: 0px solid red;
+          width: 95.4%;
+          list-style: none;
+          padding: 0; }
+          .game1 .placas .pergunta .conteudo ul.respostas li, .game2 .placas .pergunta .conteudo ul.respostas li {
+            float: left;
+            width: 158.5px;
+            height: 34px;
+            border: 0px solid red;
+            margin-left: 2.2%;
+            cursor: pointer;
+            background: #006cff;
+            padding: 18px 0;
+            text-align: center;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px; }
+            .game1 .placas .pergunta .conteudo ul.respostas li span, .game2 .placas .pergunta .conteudo ul.respostas li span {
+              font-size: 28px;
+              color: #fff; }
+          .game1 .placas .pergunta .conteudo ul.respostas li#respostasSupermercado, .game2 .placas .pergunta .conteudo ul.respostas li#respostasSupermercado {
+            background: #265cfd !important; }
+          .game1 .placas .pergunta .conteudo ul.respostas li#respostasPadaria, .game2 .placas .pergunta .conteudo ul.respostas li#respostasPadaria {
+            background: #af61f5 !important; }
+          .game1 .placas .pergunta .conteudo ul.respostas li#respostasMecanica, .game2 .placas .pergunta .conteudo ul.respostas li#respostasMecanica {
+            background: #fd519b !important; }
+          .game1 .placas .pergunta .conteudo ul.respostas li#respostasPostodeGasolina, .game2 .placas .pergunta .conteudo ul.respostas li#respostasPostodeGasolina {
+            background: #de0aff !important; }
+          .game1 .placas .pergunta .conteudo ul.respostas li#respostasMalas, .game2 .placas .pergunta .conteudo ul.respostas li#respostasMalas {
+            background: #fa0adf !important; }
+          .game1 .placas .pergunta .conteudo ul.respostas li#respostasAnimais, .game2 .placas .pergunta .conteudo ul.respostas li#respostasAnimais {
+            background: #4a16fe !important; }
+          .game1 .placas .pergunta .conteudo ul.respostas li#respostasSuaCasa, .game2 .placas .pergunta .conteudo ul.respostas li#respostasSuaCasa {
+            background: #f90036 !important; }
+          .game1 .placas .pergunta .conteudo ul.respostas li#respostasAvos, .game2 .placas .pergunta .conteudo ul.respostas li#respostasAvos {
+            background: #ff4200 !important; }
+
+@keyframes anim {
+  0% {
+    transform: skewX(0deg); }
+
+  50% {
+    transform: skewX(5deg); }
+
+  100% {
+    transform: skewX(-5deg); } }
+@-moz-keyframes anim {
+  0% {
+    -moz-transform: skewX(0deg); }
+
+  50% {
+    -moz-transform: skewX(5deg); }
+
+  100% {
+    -moz-transform: skewX(-5deg); } }
+@-webkit-keyframes anim {
+  0% {
+    -webkit-transform: skewX(0deg); }
+
+  50% {
+    -webkit-transform: skewX(5deg); }
+
+  100% {
+    -webkit-transform: skewX(-5deg); } }
+.anim {
+  animation: anim 0.5s ease-out infinite;
+  -moz-animation: anim 0.5s ease-out infinite;
+  -webkit-animation: anim 0.5s ease-out infinite; }
+
+#cobertura_oed_inicio{
+	position:absolute;
+	width:100%;
+	height:100%;
+	left:0px;
+	top:0px;
+	background: rgba(255, 255, 255, 0);
+	background-color: rgba(255, 255, 255, 0);
+	color: rgba(255, 255, 255, 0);
+	display:inherit;
+	z-index:999;
+}  
+  
